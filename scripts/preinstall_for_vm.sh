@@ -54,7 +54,7 @@ fi
 
 # make btrfs subvolumes
 mkdir /mnt
-mount -L ROOT /mnt
+mount ${DISK}3 /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@var
 btrfs subvolume create /mnt/@tmp
@@ -70,7 +70,7 @@ mount -o noatime,compress=zstd,subvol=@.snapshots ${DISK}3 /mnt/.snapshots
 
 # mount home
 mkdir /mnt/home
-mount -L HOME /mnt/home
+mount ${DISK}4 /mnt/home
 
 # mount boot for EFI case
 mkdir -p /mnt/boot/efi
