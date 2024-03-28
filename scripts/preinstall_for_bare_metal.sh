@@ -47,7 +47,9 @@ read -r USER_EFIBOOT
 echo "The chosen EFIBOOT partition is: ${DISK}${USER_EFIBOOT}"
 
 # prompt for confirmation, warning that the root partition is going to be formatted
-read -rp "Are you sure you want to format ${DISK}${USER_ROOT}? (y/N) " -n 1 -r
+echo "\n"
+echo "WARNING: danger of losing data"
+read -rp "Are you sure you want to format ${DISK}${USER_ROOT} as ROOT using btrfs? (y/N) " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
 fi
