@@ -21,6 +21,12 @@ mkfs.ext4 /dev/vda3
 mkfs.ext4 /dev/vda4
 
 # make btrfs subvolumes
+
+# check if vda2 is correctly created and a btrfs system
+if [ ! -b /dev/vda2 -o "$(blkid -s TYPE -o value /dev/vda2)" != "btrfs" ]; then
+    echo "Error: /dev/vda2 is not a btrfs system"
+    exit 1
+
 mkdir /mnt
 mount /dev/vda2 /mnt
 btrfs subvolume create /mnt/@
