@@ -14,19 +14,23 @@ sgdisk -n 2::+8G --typecode=3:8300 /dev/vda
 sgdisk -n 3::+4G --typecode=3:8300 /dev/vda
 sgdisk -n 4::-0 --typecode=3:8300 /dev/vda
 
+# check if /dev/vda2 exists
+if [ ! -b /dev/vda2 ]; then
+    echo "Error: /dev/vda2 does not exist"
+    exit 1
+
 # format partitions
 mkfs.fat -F32 /dev/vda1
 mkfs.btrfs /dev/vda2 -f
 mkfs.ext4 /dev/vda3
 mkfs.ext4 /dev/vda4
 
-# make btrfs subvolumes
-
 # check if vda2 is correctly created and a btrfs system
 if [ ! -b /dev/vda2 -o "$(blkid -s TYPE -o value /dev/vda2)" != "btrfs" ]; then
     echo "Error: /dev/vda2 is not a btrfs system"
     exit 1
 
+# make btrfs subvolumes
 mkdir /mnt
 mount /dev/vda2 /mnt
 btrfs subvolume create /mnt/@
