@@ -38,8 +38,6 @@ do
   sudo pacman -S --noconfirm --needed ${line}
 done
 
-
-# Define a function that adds the chaotic AUR repository
 add_chaos_aur_repo() {
   pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
   pacman-key --lsign-key 3056513887B78AEB
