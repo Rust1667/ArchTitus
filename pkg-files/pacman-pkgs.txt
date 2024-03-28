@@ -43,6 +43,7 @@ dtc
 efibootmgr
 egl-wayland
 exfat-utils
+fish
 flex
 fuse2
 fuse3
@@ -53,6 +54,7 @@ gimp
 gparted
 gptfdisk
 grub-customizer
+gufw
 gst-libav
 gst-plugins-good
 gst-plugins-ugly
@@ -67,6 +69,7 @@ lutris
 lzop
 m4
 make
+materia-gtk-theme
 neofetch
 ntfs-3g
 ntp
@@ -75,6 +78,7 @@ openssh
 os-prober
 p7zip
 papirus-icon-theme
+parcellite
 patch
 picom
 pkgconf
@@ -86,7 +90,8 @@ python-notify2
 python-psutil
 python-pyqt5
 python-pip
-qemu
+qemu-base
+redshift
 snap-pac
 snapper
 steam
@@ -96,6 +101,7 @@ terminus-font
 traceroute
 ttf-droid
 ttf-hack
+ttf-hack-nerd
 ttf-roboto
 ufw
 unrar
@@ -106,6 +112,7 @@ which
 wine-gecko
 wine-mono
 winetricks
+xed
 zip
 zsh
 zsh-syntax-highlighting
