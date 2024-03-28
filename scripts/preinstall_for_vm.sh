@@ -74,7 +74,7 @@ mount ${DISK}4 /mnt/home
 
 # mount boot for EFI case
 mkdir -p /mnt/boot/efi
-mount -t vfat -L EFIBOOT /mnt/boot/
+mount -t vfat ${DISK}2 /mnt/boot/
 
 # check partitions
 fdisk -l ${DISK}
