@@ -68,9 +68,9 @@ mount -o noatime,compress=zstd,subvol=@.snapshots /dev/vda3 /mnt/.snapshots
 mkdir /mnt/home
 mount /dev/vda3 /mnt/home
 
-# mount boot
-mkdir /mnt/boot
-mount /dev/vda1 /mnt/boot
+# mount boot for EFI case
+mkdir -p /mnt/boot/efi
+mount -t vfat -L EFIBOOT /mnt/boot/
 
 # check partitions
 fdisk -l /dev/vda
