@@ -91,6 +91,7 @@ mount -t vfat ${DISK}${USER_EFIBOOT} /mnt/boot/
 
 # check partitions
 #fdisk -l ${DISK}
+sudo parted ${DISK} print
 lsblk ${DISK}
 
 # check mounted directory
