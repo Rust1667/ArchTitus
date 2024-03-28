@@ -9,6 +9,10 @@ echo "WARNING: This script is going to wipe the partition that you choose as ROO
 echo "Make sure you've selected the correct partition or you'll lose all data on it!"
 read -rp "Press enter to continue"
 
+# check partitions
+fdisk -l
+lsblk
+
 # Define DISK variable
 DEFAULT_DISK="/dev/sda"
 echo "Please enter the value for DISK (default: $DEFAULT_DISK):"

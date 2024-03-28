@@ -9,6 +9,10 @@ echo "WARNING: This script is going to wipe the disk that you choose"
 echo "Make sure you've selected the correct disk or you'll lose all data on it!"
 read -rp "Press enter to continue"
 
+# check partitions
+fdisk -l
+lsblk
+
 # Define DISK variable
 DEFAULT_DISK="/dev/vda"
 echo "Please enter the value for DISK (default: $DEFAULT_DISK):"
