@@ -7,6 +7,7 @@ pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
 # Warning message
 echo "WARNING: This script is going to wipe the partition that you choose as ROOT"
 echo "Make sure you've selected the correct partition or you'll lose all data on it!"
+echo "You will be able to confirm later, just before formatting that partition."
 read -rp "Press enter to continue"
 
 # check partitions
