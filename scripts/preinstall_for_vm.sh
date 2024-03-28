@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# adjust cli
+setfont ter-v22b
+pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
+
+# Warning message
+echo "WARNING: This script is going to wipe the disk that you choose"
+echo "Make sure you've selected the correct disk or you'll lose all data on it!"
+read -rp "Press enter to continue"
+
 # Define DISK variable
 DEFAULT_DISK="/dev/vda"
 echo "Please enter the value for DISK (default: $DEFAULT_DISK):"
@@ -10,11 +19,6 @@ else
     DISK="$USER_DISK"
 fi
 echo "The chosen disk path is: ${DISK}"
-
-# adjust cli
-loadkeys es
-setfont ter-v22b
-pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
 
 # wipe disk
 umount -A --recursive /mnt
