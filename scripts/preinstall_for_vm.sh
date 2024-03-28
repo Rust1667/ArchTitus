@@ -44,11 +44,11 @@ mkdir /mnt/boot
 mount /dev/vda1 /mnt/boot
 
 # check partitions
-fdisk -l /dev/vda
-lsblk /dev/vda
+# fdisk -l /dev/vda
+# lsblk /dev/vda
 
 # check mounted directory
-ls -l /mnt
+# ls -l /mnt
 
 # suggest next step
 echo -ne "
