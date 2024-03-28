@@ -39,11 +39,24 @@ do
 done
 
 
+# Define a function that adds the chaotic AUR repository
+add_chaos_aur_repo() {
+  pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+  pacman-key --lsign-key 3056513887B78AEB
+  pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+  pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+  echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+}
+
 if [[ ! $AUR_HELPER == none ]]; then
-  cd ~
-  git clone "https://aur.archlinux.org/$AUR_HELPER.git"
-  cd ~/$AUR_HELPER
-  makepkg -si --noconfirm
+    # cd ~
+    # git clone "https://aur.archlinux.org/$AUR_HELPER.git"
+    # cd ~/$AUR_HELPER
+    # makepkg -si --noconfirm
+  # add the chaotic AUR repository
+  add_chaos_aur_repo
+  # install the AUR helper
+  pacman -S --noconfirm --needed $AUR_HELPER
   # sed $INSTALL_TYPE is using install type to check for MINIMAL installation, if it's true, stop
   # stop the script and move on, not installing any more packages below that line
   sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchTitus/pkg-files/aur-pkgs.txt | while read line
