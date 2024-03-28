@@ -13,7 +13,7 @@ pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
 # wipe disk
 umount -A --recursive /mnt
 sgdisk -Z ${DISK} # zap all on disk
-#sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
+sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
 
 # # create partitions
 sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' ${DISK} # partition 1 (BIOS Boot Partition)
