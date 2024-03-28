@@ -64,7 +64,7 @@ mount -o noatime,compress=zstd,subvol=@.snapshots ${DISK}3 /mnt/.snapshots
 
 # mount home
 mkdir /mnt/home
-mount ${DISK}3 /mnt/home
+mount ${DISK}4 /mnt/home
 
 # mount boot for EFI case
 mkdir -p /mnt/boot/efi
