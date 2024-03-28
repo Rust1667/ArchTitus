@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # adjust cli
 loadkeys es
 setfont ter-v22b
