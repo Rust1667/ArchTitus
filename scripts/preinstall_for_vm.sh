@@ -43,11 +43,11 @@ mount -o noatime,compress=zstd,subvol=@tmp /dev/vda2 /mnt/tmp
 mount -o noatime,compress=zstd,subvol=@.snapshots /dev/vda2 /mnt/.snapshots
 
 #mount home
-mkdir -p /mnt/{home}
+mkdir /mnt/home
 mount /dev/vda3 /mnt/home
 
 #mount boot
-mkdir -p /mnt/{boot}
+mkdir /mnt/boot
 mount /dev/vda1 /mnt/boot
 
 #check partitions
