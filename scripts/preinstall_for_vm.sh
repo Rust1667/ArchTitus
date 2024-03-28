@@ -12,7 +12,7 @@ sgdisk -Z /dev/vda # zap all on disk
 
 # make partitions
 sgdisk -n 1::+300M --typecode=1:ef02 /dev/vda
-sgdisk -n 2::+8G --typecode=3:8300 /dev/vda
+sgdisk -n 2::+8G --typecode=2:8300 /dev/vda
 
 # check if /dev/vda2 exists
 if [ ! -b /dev/vda2 ]; then
@@ -21,7 +21,7 @@ if [ ! -b /dev/vda2 ]; then
 fi
 
 sgdisk -n 3::+4G --typecode=3:8300 /dev/vda
-sgdisk -n 4::-0 --typecode=3:8300 /dev/vda
+sgdisk -n 4::-0 --typecode=4:8300 /dev/vda
 
 # format partitions
 mkfs.fat -F32 /dev/vda1
