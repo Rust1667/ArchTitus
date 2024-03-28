@@ -2,6 +2,7 @@
 
 # adjust cli
 setfont ter-v22b
+pacman-key --innit
 pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
 
 # Warning message
