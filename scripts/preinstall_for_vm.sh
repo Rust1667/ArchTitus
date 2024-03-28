@@ -6,7 +6,7 @@ pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
 # wipe disk
 umount -A --recursive /mnt
 sgdisk -Z /dev/vda # zap all on disk
-sgdisk -a 2048 -o /dev/vda # new gpt disk 2048 alignment
+#sgdisk -a 2048 -o /dev/vda # new gpt disk 2048 alignment
 
 # make partitions
 sgdisk -n 1::+600M --typecode=1:ef02 --change-name=1:'BIOSBOOT' /dev/vda
