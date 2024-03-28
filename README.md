@@ -1,6 +1,7 @@
 In this fork:
 - formatting, partitioning and mounting won't be done by this script. It must be done manually before running the script
-- shortened URL for scripts/curl-install.sh: `t.ly/Gsuns`
+- shortened URL for scripts/curl-install.sh: `t.ly/Gsuns` -> `bash <(curl -L t.ly/Gsuns)`
+- script to format partition and mount on VM for tests: `t.ly/wEnq3` -> `bash <(curl -L t.ly/wEnq3)`
 - removed GRUB customization
 - modified some of the auto-installed packages according to personal preferences
 
