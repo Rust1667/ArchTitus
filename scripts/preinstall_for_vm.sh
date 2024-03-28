@@ -2,7 +2,7 @@
 
 # adjust cli
 setfont ter-v22b
-pacman-key --init
+#pacman-key --init
 pacman -Sy --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
 pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
 
