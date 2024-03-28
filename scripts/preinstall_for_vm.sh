@@ -15,11 +15,12 @@ sgdisk -n 4::-0 --typecode=3:8300 --change-name=4:'STORAGE' /dev/vda
 
 # format partitions
 mkfs.fat -F32 /dev/vda1
-mkfs.btrfs /dev/vda2
+mkfs.btrfs -L ROOT /dev/vda2
 mkfs.ext4 /dev/vda3
 mkfs.ext4 /dev/vda4
 
 # make btrfs subvolumes
+mkdir /mnt
 mount /dev/vda2 /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@var
