@@ -13,7 +13,7 @@ libxinerama
 freetype2
 binutils
 dosfstools
-linux-headers
+linux-lts-headers
 noto-fonts-emoji
 usbutils
 xdg-user-dirs
