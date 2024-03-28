@@ -9,10 +9,10 @@ sgdisk -Z /dev/vda # zap all on disk
 #sgdisk -a 2048 -o /dev/vda # new gpt disk 2048 alignment
 
 # make partitions
-sgdisk -n 1::+300M --typecode=1:ef02 --change-name=1:'BIOSBOOT' /dev/vda
-sgdisk -n 2::+8G --typecode=3:8300 --change-name=2:'ROOT' /dev/vda
-sgdisk -n 3::+4G --typecode=3:8300 --change-name=3:'HOME' /dev/vda
-sgdisk -n 4::-0 --typecode=3:8300 --change-name=4:'STORAGE' /dev/vda
+sgdisk -n 1::+300M --typecode=1:ef02 /dev/vda
+sgdisk -n 2::+8G --typecode=3:8300 /dev/vda
+sgdisk -n 3::+4G --typecode=3:8300 /dev/vda
+sgdisk -n 4::-0 --typecode=3:8300 /dev/vda
 
 # format partitions
 mkfs.fat -F32 /dev/vda1
