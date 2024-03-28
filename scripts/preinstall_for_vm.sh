@@ -1,8 +1,14 @@
 #!/bin/bash
 
 # Define DISK variable
-echo "Enter the value for DISK (example: /dev/vda)"
-read -r DISK
+DEFAULT_DISK="/dev/vda"
+echo "Please enter the value for DISK (default: $DEFAULT_DISK):"
+read -r USER_DISK
+if [ -z "$USER_DISK" ]; then
+    DISK="$DEFAULT_DISK"
+else
+    DISK="$USER_DISK"
+fi
 echo "The chosen disk path is: ${DISK}"
 
 # adjust cli
