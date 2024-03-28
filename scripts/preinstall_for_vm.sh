@@ -35,19 +35,19 @@ btrfs subvolume create /mnt/@tmp
 btrfs subvolume create /mnt/@.snapshots
 umount /mnt
 
-#make mount directories
-mkdir -p /mnt/{boot,home,var,tmp,.snapshots}
-
 #mount btrfs subvolumes
 mount -o noatime,compress=zstd,subvol=@ /dev/vda2 /mnt
+mkdir -p /mnt/{var,tmp,.snapshots}
 mount -o noatime,compress=zstd,subvol=@var /dev/vda2 /mnt/var
 mount -o noatime,compress=zstd,subvol=@tmp /dev/vda2 /mnt/tmp
 mount -o noatime,compress=zstd,subvol=@.snapshots /dev/vda2 /mnt/.snapshots
 
 #mount home
+mkdir -p /mnt/{home}
 mount /dev/vda3 /mnt/home
 
 #mount boot
+mkdir -p /mnt/{boot}
 mount /dev/vda1 /mnt/boot
 
 #check partitions
@@ -55,7 +55,7 @@ fdisk -l /dev/vda
 lsblk /dev/vda
 
 #check mounted directory
-ls /mnt
+ls -l /mnt
 
 # suggest next step
 echo -ne "
