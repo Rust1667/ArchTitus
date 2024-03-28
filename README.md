@@ -1,3 +1,5 @@
+shortened URL for scripts/curl-install.sh: https://t.ly/Gsuns
+
 # Resurrecting Project 
 
 I'm changing the scope of the project to only do minimal installs and no longer offer the options for the install script. As the official arch install script has become better this one is no longer needed. However, I still want a script that installs my two flavors of arch. 
@@ -10,7 +12,7 @@ This is currently a work in progress and check the branchs for the old versions.
 New single command quicklaunch
 
 ```
-bash <(curl -L christitus.com/archtitus)
+bash <(curl -L t.ly/Gsuns)
 ```
 
 Old Script with all the customizations is located in the (all-in-one-2022 branch) here: <https://github.com/ChrisTitusTech/ArchTitus/tree/all-in-one-2022-script>
@@ -35,7 +37,7 @@ From initial Prompt type the following commands:
 
 ```
 pacman -Sy git
-git clone https://github.com/ChrisTitusTech/ArchTitus
+git clone https://github.com/Rust1667/ArchTitus
 cd ArchTitus
 ./archtitus.sh
 ```
