@@ -3,7 +3,8 @@
 # adjust cli
 setfont ter-v22b
 pacman-key --innit
-pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
+pacman -Sy --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
+pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
 
 # Warning message
 echo "WARNING: This script is going to wipe the disk that you choose"
