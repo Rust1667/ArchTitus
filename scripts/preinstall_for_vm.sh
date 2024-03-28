@@ -1,7 +1,7 @@
 # adjust cli
 loadkeys es
 setfont ter-v22b
-pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
+pacman -Sy --noconfirm --needed gptfdisk btrfs-progs glibc
 
 # wipe disk
 umount -A --recursive /mnt
