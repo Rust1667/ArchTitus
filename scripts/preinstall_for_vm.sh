@@ -15,12 +15,6 @@ umount -A --recursive /mnt
 sgdisk -Z ${DISK} # zap all on disk
 #sgdisk -a 2048 -o ${DISK} # new gpt disk 2048 alignment
 
-# make partitions
-# sgdisk -n 1::+300M --typecode=1:ef02 ${DISK}
-# sgdisk -n 2::+8G --typecode=2:8300 ${DISK}
-# sgdisk -n 3::+4G --typecode=3:8300 ${DISK}
-# sgdisk -n 4::-0 --typecode=4:8300 ${DISK}
-
 # # create partitions
 sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' ${DISK} # partition 1 (BIOS Boot Partition)
 sgdisk -n 2::+300M --typecode=2:ef00 --change-name=2:'EFIBOOT' ${DISK} # partition 2 (UEFI Boot Partition)
@@ -31,7 +25,6 @@ if [[ ! -d "/sys/firmware/efi" ]]; then # Checking for bios system
     sgdisk -A 1:set:2 ${DISK}
 fi
 partprobe ${DISK} # reread partition table to ensure it is correct
-
 
 
 # check if ${DISK}3 exists
