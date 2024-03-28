@@ -20,8 +20,8 @@ sgdisk -Z /dev/vda # zap all on disk
 sgdisk -n 1::+1M --typecode=1:ef02 --change-name=1:'BIOSBOOT' /dev/vda # partition 1 (BIOS Boot Partition)
 sgdisk -n 2::+300M --typecode=2:ef00 --change-name=2:'EFIBOOT' /dev/vda # partition 2 (UEFI Boot Partition)
 sgdisk -n 3::-8G --typecode=3:8300 --change-name=3:'ROOT' /dev/vda # partition 3 (Root), default start, remaining
-sgdisk -n 3::+4G --typecode=3:8300 --change-name=4:'HOME' /dev/vda # partition 4
-sgdisk -n 4::-0 --typecode=4:8300 --change-name=5:'STORAGE' /dev/vda # partition 5
+sgdisk -n 4::+4G --typecode=4:8300 --change-name=4:'HOME' /dev/vda # partition 4
+sgdisk -n 5::-0 --typecode=5:8300 --change-name=5:'STORAGE' /dev/vda # partition 5
 if [[ ! -d "/sys/firmware/efi" ]]; then # Checking for bios system
     sgdisk -A 1:set:2 /dev/vda
 fi
