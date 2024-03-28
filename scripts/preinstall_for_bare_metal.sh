@@ -93,7 +93,7 @@ mount -t vfat ${DISK}${USER_EFIBOOT} /mnt/boot/
 lsblk ${DISK}
 
 # check mounted directory
-ls -la /mnt
+#ls -la /mnt
 
 # suggest next step
 echo -ne "
