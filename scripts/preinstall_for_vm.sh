@@ -11,7 +11,7 @@ read -rp "Press enter to continue"
 
 # check partitions
 fdisk -l
-lsblk
+#lsblk
 
 # Define DISK variable
 DEFAULT_DISK="/dev/vda"
@@ -85,7 +85,7 @@ mkdir -p /mnt/boot/efi
 mount -t vfat ${DISK}2 /mnt/boot/
 
 # check partitions
-fdisk -l ${DISK}
+#fdisk -l ${DISK}
 lsblk ${DISK}
 
 # check mounted directory
