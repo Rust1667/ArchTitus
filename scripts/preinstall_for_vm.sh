@@ -16,7 +16,7 @@ sgdisk -n 4::-0 --typecode=3:8300 /dev/vda
 
 # format partitions
 mkfs.fat -F32 /dev/vda1
-mkfs.btrfs /dev/vda2
+mkfs.btrfs /dev/vda2 -f
 mkfs.ext4 /dev/vda3
 mkfs.ext4 /dev/vda4
 
