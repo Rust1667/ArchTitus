@@ -24,6 +24,14 @@ else
 fi
 echo "The chosen disk path is: ${DISK}"
 
+sudo parted ${DISK} print
+
+# promp for confirmation before wiping the disk
+read -rp "Are you sure you want to wipe the disk ${DISK}? (y/N): " -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    exit 1
+fi
+
 # wipe disk
 umount -A --recursive /mnt
 sgdisk -Z ${DISK} # zap all on disk

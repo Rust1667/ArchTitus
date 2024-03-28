@@ -27,6 +27,8 @@ echo "The chosen disk path is: ${DISK}"
 # check partitions
 partprobe ${DISK} # reread partition table to ensure it is correct
 
+sudo parted ${DISK} print
+
 # promp the user to choose the ROOT partition
 echo -ne "Please enter the partition number for the ROOT partition (e.g. 3):\n"
 read -r USER_ROOT
@@ -42,8 +44,11 @@ echo -ne "Please enter the partition number for the EFIBOOT partition (e.g. 2):\
 read -r USER_EFIBOOT
 echo "The chosen EFIBOOT partition is: ${DISK}${USER_EFIBOOT}"
 
-# prompt for confirmation, warning that the root partition is going to be wiped
-read -rp "Are you sure you want to wipe ${DISK}${USER_ROOT}? (y/N) " -n 1 -r
+# prompt for confirmation, warning that the root partition is going to be formatted
+read -rp "Are you sure you want to format ${DISK}${USER_ROOT}? (y/N) " -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    exit 1
+fi
 
 # format the root partition
 mkfs.btrfs -f ${DISK}${USER_ROOT}
