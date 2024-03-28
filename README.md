@@ -1,4 +1,8 @@
-shortened URL for scripts/curl-install.sh: https://t.ly/Gsuns
+In this fork:
+- formatting, partitioning and mounting won't be done by this script. It must be done manually before running the script
+- shortened URL for scripts/curl-install.sh: https://t.ly/Gsuns
+- removed GRUB customization
+- modified some of the auto-installed packages according to personal preferences
 
 # Resurrecting Project 
 
