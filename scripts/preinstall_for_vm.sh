@@ -30,16 +30,10 @@ partprobe /dev/vda # reread partition table to ensure it is correct
 
 
 # check if /dev/vda3 exists
-# if [ ! -b /dev/vda3 ]; then
-#     echo "Error: /dev/vda3 does not exist"
-#     exit 1
-# fi
-
-# check if vda3 is correctly created and a btrfs system
-# if [ ! -b /dev/vda3 -o "$(blkid -s TYPE -o value /dev/vda2)" != "btrfs" ]; then
-#     echo "Error: /dev/vda3 is not a btrfs system"
-#     exit 1
-# fi
+if [ ! -b /dev/vda3 ]; then
+    echo "Error: /dev/vda3 does not exist"
+    exit 1
+fi
 
 # format partitions
 mkfs.fat -F32 /dev/vda1
@@ -47,6 +41,12 @@ mkfs.fat -F32 /dev/vda2
 mkfs.btrfs /dev/vda3 -f
 mkfs.ext4 /dev/vda4
 mkfs.ext4 /dev/vda5
+
+# check if vda3 is correctly created and a btrfs system
+if [ ! -b /dev/vda3 -o "$(blkid -s TYPE -o value /dev/vda3)" != "btrfs" ]; then
+    echo "Error: /dev/vda3 is not a btrfs system"
+    exit 1
+fi
 
 # make btrfs subvolumes
 mkdir /mnt
