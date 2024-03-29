@@ -189,10 +189,13 @@ if [ $(whoami) = "root"  ]; then
     groupadd libvirt
     # Check If the directory /home/$USERNAME exists already, and in that case, take ownership if owner is not $USERNAME
     if [ -d "/home/$USERNAME" ]; then
-        current_owner=$(stat -c "%U" /home/$USERNAME)
-        if [ "$current_owner" != "$USERNAME" ]; then
+        # current_owner=$(stat -c "%U" /home/$USERNAME)
+        # if [ "$current_owner" != "$USERNAME" ]; then
             chown -R $USERNAME /home/$USERNAME
-        fi
+            chgrp -R $USERNAME /home/$USERNAME
+            chmod -R g+w /home/$USERNAME
+            chmod -R g+s /home/$USERNAME
+        # fi
     fi
     useradd -m -G wheel,libvirt -s /bin/bash $USERNAME 
     echo "$USERNAME created, home directory created, added to wheel and libvirt group, default shell set to /bin/bash"
