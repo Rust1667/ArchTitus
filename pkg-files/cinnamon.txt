@@ -17,3 +17,4 @@ gnome-disk-utility
 gnome-system-monitor
 gparted
 lightdm-gtk-greeter-settings
+pavucontrol
