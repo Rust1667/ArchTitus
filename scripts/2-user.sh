@@ -22,6 +22,8 @@ source $HOME/ArchTitus/configs/setup.conf
 
   cd ~
   mkdir "/home/$USERNAME/.cache"
+
+  # setup zsh
   # touch "/home/$USERNAME/.cache/zshhistory"
   # git clone "https://github.com/ChrisTitusTech/zsh"
   # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -37,6 +39,12 @@ do
   echo "INSTALLING: ${line}"
   sudo pacman -S --noconfirm --needed ${line}
 done
+
+# install fish shell
+sudo pacman -S --noconfirm --needed fish
+sudo usermod -s /usr/bin/fish $USERNAME
+echo "Fish shell has been set as the default for user $USERNAME."
+echo "Please log out and log back in to apply the changes."
 
 if [[ ! $AUR_HELPER == none ]]; then
     # cd ~

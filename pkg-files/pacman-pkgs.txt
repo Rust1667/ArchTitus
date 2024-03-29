@@ -3,6 +3,7 @@ alsa-utils
 base-devel
 binutils
 dosfstools
+fish
 freetype2
 libx11
 libxft
@@ -11,6 +12,7 @@ linux-lts-headers
 mesa
 neovim
 noto-fonts-emoji
+os-prober
 ufw
 usbutils
 xdg-user-dirs
@@ -38,7 +40,6 @@ dtc
 efibootmgr
 exfat-utils
 firefox
-fish
 flex
 fuse2
 fuse3
@@ -61,7 +62,6 @@ libdvdcss
 make
 megatools
 neofetch
-os-prober
 p7zip
 parcellite
 pulseaudio
