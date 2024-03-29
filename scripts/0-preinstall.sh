@@ -28,7 +28,7 @@ Setting up mirrors for optimal download
 source $CONFIGS_DIR/setup.conf
 iso=$(curl -4 ifconfig.co/country-iso)
 timedatectl set-ntp true
-pacman -S --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
+#pacman -S --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
 pacman -S --noconfirm --needed pacman-contrib terminus-font
 setfont ter-v22b
 sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
@@ -39,17 +39,17 @@ echo -ne "
                     Setting up $iso mirrors for faster downloads
 -------------------------------------------------------------------------
 "
-MIRROR_URL="https://nox.panibrez.com/archlinux/\$repo/os/\$arch"
-echo "Server = $MIRROR_URL" | sudo tee /etc/pacman.d/mirrorlist
+#MIRROR_URL="https://nox.panibrez.com/archlinux/\$repo/os/\$arch"
+#echo "Server = $MIRROR_URL" | sudo tee /etc/pacman.d/mirrorlist
 # reflector --verbose -c $iso --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist
-# reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
-mkdir /mnt &>/dev/null # Hiding error message if any
+reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
+#mkdir /mnt &>/dev/null # Hiding error message if any
 echo -ne "
 -------------------------------------------------------------------------
                     Installing Prerequisites
 -------------------------------------------------------------------------
 "
-pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
+#pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
 # echo -ne "
 # -------------------------------------------------------------------------
 #                     Formating Disk
