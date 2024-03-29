@@ -52,18 +52,18 @@ fi
 # grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
 # echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
 
-# Uncomment GRUB_DISABLE_OS_PROBER="false"
-GRUB_CONFIG="/etc/default/grub"
-# Check if the GRUB_DISABLE_OS_PROBER line exists
-if grep -q "^GRUB_DISABLE_OS_PROBER=" "$GRUB_CONFIG"; then
-    # Uncomment the line by removing the leading #
-    sudo sed -i 's/^# *\(GRUB_DISABLE_OS_PROBER=\)/\1/' "$GRUB_CONFIG"
-    echo "GRUB_DISABLE_OS_PROBER uncommented."
-else
-    # If the line doesn't exist, add it
-    echo 'GRUB_DISABLE_OS_PROBER="false"' | sudo tee -a '$GRUB_CONFIG'
-    echo 'GRUB_DISABLE_OS_PROBER added.'
-fi
+# # Uncomment GRUB_DISABLE_OS_PROBER="false"
+# GRUB_CONFIG="/etc/default/grub"
+# # Check if the GRUB_DISABLE_OS_PROBER line exists
+# if grep -q "^GRUB_DISABLE_OS_PROBER=" "$GRUB_CONFIG"; then
+#     # Uncomment the line by removing the leading #
+#     sudo sed -i 's/^# *\(GRUB_DISABLE_OS_PROBER=\)/\1/' "$GRUB_CONFIG"
+#     echo "GRUB_DISABLE_OS_PROBER uncommented."
+# else
+#     # If the line doesn't exist, add it
+#     echo 'GRUB_DISABLE_OS_PROBER="false"' | sudo tee -a '$GRUB_CONFIG'
+#     echo 'GRUB_DISABLE_OS_PROBER added.'
+# fi
 
 # Update grub
 echo -e "Updating grub..."
