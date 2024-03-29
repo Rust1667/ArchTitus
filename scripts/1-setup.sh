@@ -191,7 +191,7 @@ if [ $(whoami) = "root"  ]; then
     if [ -d "/home/$USERNAME" ]; then
         # current_owner=$(stat -c "%U" /home/$USERNAME)
         # if [ "$current_owner" != "$USERNAME" ]; then
-            chown -R $USERNAME:$USERNAME /home/$USERNAME
+            chown -R $USERNAME:users /home/$USERNAME
             chmod -R g+w /home/$USERNAME
             chmod -R g+s /home/$USERNAME
         # fi
