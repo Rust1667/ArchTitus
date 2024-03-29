@@ -38,23 +38,13 @@ do
   sudo pacman -S --noconfirm --needed ${line}
 done
 
-add_chaos_aur_repo() {
-  sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-  sudo pacman-key --lsign-key 3056513887B78AEB
-  sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
-  sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-  sudo sh -c 'echo "[chaotic-aur]" >> /etc/pacman.d/pacman.conf'
-  sudo sh -c 'echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.d/pacman.conf'
-  sudo pacman -Sy --noconfirm --needed
-}
-
 if [[ ! $AUR_HELPER == none ]]; then
     # cd ~
     # git clone "https://aur.archlinux.org/$AUR_HELPER.git"
     # cd ~/$AUR_HELPER
     # makepkg -si --noconfirm
   # add the chaotic AUR repository
-  add_chaos_aur_repo
+  #add_chaos_aur_repo
   # install the AUR helper
   sudo pacman -S --noconfirm --needed $AUR_HELPER
   # sed $INSTALL_TYPE is using install type to check for MINIMAL installation, if it's true, stop
