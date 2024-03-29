@@ -52,7 +52,7 @@ fi
 # grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
 # echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
 
-# # Uncomment GRUB_DISABLE_OS_PROBER="false"
+# # Uncomment GRUB_DISABLE_OS_PROBER="false" (broken)
 # GRUB_CONFIG="/etc/default/grub"
 # # Check if the GRUB_DISABLE_OS_PROBER line exists
 # if grep -q "^GRUB_DISABLE_OS_PROBER=" "$GRUB_CONFIG"; then
