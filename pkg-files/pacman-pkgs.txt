@@ -16,6 +16,7 @@ os-prober
 ufw
 usbutils
 xdg-user-dirs
+xorg-drivers
 xorg-server
 xorg-xinit
 xorg-xkill
