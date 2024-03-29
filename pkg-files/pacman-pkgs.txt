@@ -73,6 +73,7 @@ python-psutil
 python-pyqt5
 telegram-desktop
 thunderbird
+timeshift
 unrar
 unzip
 virt-manager
