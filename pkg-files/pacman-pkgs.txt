@@ -16,7 +16,7 @@ os-prober
 ufw
 usbutils
 xdg-user-dirs
-xf86-input-libinput
+xorg-drivers
 xorg-server
 xorg-xinit
 xorg-xkill
