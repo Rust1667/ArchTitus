@@ -1,7 +1,10 @@
 --END OF MINIMAL INSTALL--
-autojump
-github-desktop-bin
-bibata-cursor-theme
-ttf-vista-fonts
-ttf-ms-fonts
 appimagelauncher
+autojump
+bibata-cursor-theme
+cryptomator
+github-desktop-bin
+qbittorrent-enhanced
+spoof-dpi-bin
+ttf-ms-fonts
+ttf-vista-fonts
