@@ -36,7 +36,7 @@ sed -i "s%GRUB_CMDLINE_LINUX_DEFAULT=\"%GRUB_CMDLINE_LINUX_DEFAULT=\"cryptdevice
 fi
 
 # set kernel parameter for adding splash screen
-# sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]*/& splash /' /etc/default/grub
+sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]*/& splash /' /etc/default/grub
 
 # echo -e "Installing CyberRe Grub theme..."
 # THEME_DIR="/boot/grub/themes"
