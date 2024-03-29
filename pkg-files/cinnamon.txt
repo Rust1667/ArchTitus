@@ -4,4 +4,12 @@ materia-gtk-theme
 papirus-icon-theme
 ttf-hack-nerd
 redshift
+parcellite
+lightdm-gtk-greeter-settings
+libgtop
+eog
+mpv
+celluloid
+xed
+qalculate-gtk
 --END OF MINIMAL INSTALL--
