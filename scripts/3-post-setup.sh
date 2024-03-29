@@ -96,6 +96,8 @@ echo "  NetworkManager enabled"
 # echo "  Bluetooth enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
+systemctl enable ufw.service
+echo "  ufw enabled"
 
 # if [[ "${FS}" == "luks" || "${FS}" == "btrfs" ]]; then
 # echo -ne "
