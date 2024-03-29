@@ -125,7 +125,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 # Graphics Drivers find and install
-# gpu_type=$(lspci)
+gpu_type=$(lspci)
 # if grep -E "NVIDIA|GeForce" <<< ${gpu_type}; then
 #     pacman -S --noconfirm --needed nvidia
 # 	nvidia-xconfig
@@ -136,7 +136,10 @@ echo -ne "
 # elif grep -E "Intel Corporation UHD" <<< ${gpu_type}; then
 #     pacman -S --needed --noconfirm libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils lib32-mesa
 # fi
-pacman -S --noconfirm --needed libva-intel-driver
+if grep -E "Intel.*Graphics" <<< ${gpu_type}; then
+    pacman -S --noconfirm --needed libva-intel-driver
+    echo "Installing Intel Graphics drivers"
+fi
 #SETUP IS WRONG THIS IS RUN
 if ! source $HOME/ArchTitus/configs/setup.conf; then
 	# Loop through user input until the user gives a valid username
