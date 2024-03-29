@@ -46,3 +46,22 @@ echo -ne "
 -------------------------------------------------------------------------
                 Done - Please Eject Install Media and Reboot
 "
+
+# combine all the logs into one log (they are all located in /mnt/home/$USERNAME)
+cd /mnt/home/$USERNAME
+cat *.log > ArchTitus.log
+
+# from the log, print only what was errors
+grep --color=always -E '(Error|error|Failed|failed) ' ArchTitus.log
+
+# upload the log to https://0x0.st
+# curl -F'file=@./ArchTitus.log' https://0x0.st
+
+echo -ne "You could now upload the log to https://0x0.st using the following command:\n\ncurl -F'file=@./ArchTitus.log' https://0x0.st\n\n"
+
+# ask the user if they want to upload the log
+read -p "Would you like to upload the log? (y/N) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    curl -F'file=@./ArchTitus.log' https://0x0.st
+fi
