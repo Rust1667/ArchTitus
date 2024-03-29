@@ -1,3 +1,7 @@
 cinnamon
 gnome-terminal
+materia-gtk-theme
+papirus-icon-theme
+ttf-hack-nerd
+redshift
 --END OF MINIMAL INSTALL--

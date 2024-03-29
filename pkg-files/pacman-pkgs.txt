@@ -17,11 +17,6 @@ linux-lts-headers
 noto-fonts-emoji
 usbutils
 xdg-user-dirs
-materia-gtk-theme
-papirus-icon-theme
-ttf-hack-nerd
-redshift
-gvfs-mtp
 --END OF MINIMAL INSTALL--
 alsa-plugins
 alsa-utils
@@ -90,3 +85,4 @@ megatools
 zip
 unzip
 unrar
+gvfs-mtp
