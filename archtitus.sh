@@ -52,7 +52,7 @@ cd /mnt/home/$USERNAME
 cat *.log > ArchTitus.log
 
 # from the log, print only what was errors
-grep --color=always -E '(Error|error|Failed|failed) ' ArchTitus.log
+# grep --color=always -E '(Error|error|Failed|failed) ' ArchTitus.log
 
 # upload the log to https://0x0.st
 # curl -F'file=@./ArchTitus.log' https://0x0.st
