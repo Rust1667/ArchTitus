@@ -112,3 +112,10 @@ echo -ne "
 next step:
 bash <(curl -L t.ly/Gsuns)
 "
+
+# ask the user if they want to run the next script
+NEXT_SCRIPT=t.ly/Gsuns
+read -rp "run next script ${NEXT_SCRIPT}? (y/N) " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    bash <(curl -L $NEXT_SCRIPT)
+fi
