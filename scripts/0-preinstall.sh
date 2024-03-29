@@ -39,7 +39,9 @@ echo -ne "
                     Setting up $iso mirrors for faster downloads
 -------------------------------------------------------------------------
 "
-reflector --verbose -c ES --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist
+MIRROR_URL="https://nox.panibrez.com/archlinux/\$repo/os/\$arch"
+echo "Server = $MIRROR_URL" | sudo tee /etc/pacman.d/mirrorlist
+# reflector --verbose -c $iso --protocol https --sort rate --latest 20 --download-timeout 5 --threads 5 --save /etc/pacman.d/mirrorlist
 # reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
 mkdir /mnt &>/dev/null # Hiding error message if any
 echo -ne "
