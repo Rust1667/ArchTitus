@@ -4,6 +4,11 @@
 setfont ter-v22b
 #pacman-key --init
 #pacman -Sy --noconfirm archlinux-keyring #update keyrings to latest to prevent packages failing to install
+
+pacman -S --noconfirm --needed reflector
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+reflector -a 48 -c $iso -f 5 -l 20 --sort rate --save /etc/pacman.d/mirrorlist
+
 pacman -S --noconfirm --needed gptfdisk btrfs-progs glibc
 
 # Warning message
