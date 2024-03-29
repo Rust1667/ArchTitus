@@ -23,14 +23,14 @@ echo -ne "
 -------------------------------------------------------------------------
                 Scripts are in directory named ArchTitus
 "
-    ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee startup.log
+    ( bash $SCRIPT_DIR/scripts/startup.sh )|& tee startup.log || { echo -e "  ERROR: executing startup.sh"; exit 1; }
       source $CONFIGS_DIR/setup.conf
-    ( bash $SCRIPT_DIR/scripts/0-preinstall.sh )|& tee 0-preinstall.log
-    ( arch-chroot /mnt $HOME/ArchTitus/scripts/1-setup.sh )|& tee 1-setup.log
+    ( bash $SCRIPT_DIR/scripts/0-preinstall.sh )|& tee 0-preinstall.log || { echo -e "  ERROR: executing 0-preinstall.sh"; exit 1; }
+    ( arch-chroot /mnt $HOME/ArchTitus/scripts/1-setup.sh )|& tee 1-setup.log || { echo -e "Failed to run 1-setup.sh"; exit 1; }
     if [[ ! $DESKTOP_ENV == server ]]; then
-      ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/ArchTitus/scripts/2-user.sh )|& tee 2-user.log
+      ( arch-chroot /mnt /usr/bin/runuser -u $USERNAME -- /home/$USERNAME/ArchTitus/scripts/2-user.sh )|& tee 2-user.log || { echo -e "User setup script failed, skipping"; exit 1; }
     fi
-    ( arch-chroot /mnt $HOME/ArchTitus/scripts/3-post-setup.sh )|& tee 3-post-setup.log
+    ( arch-chroot /mnt $HOME/ArchTitus/scripts/3-post-setup.sh )|& tee 3-post-setup.log || { echo -e "Failed to run 3-post-setup.sh"; exit 1; }
     cp -v *.log /mnt/home/$USERNAME
 
 echo -ne "
