@@ -71,6 +71,7 @@ htop
 intel_gpu_top
 keepassxc
 libdvdcss
+lsd
 make
 megatools
 parcellite
