@@ -137,7 +137,7 @@ gpu_type=$(lspci)
 #     pacman -S --needed --noconfirm libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils lib32-mesa
 # fi
 if grep -E "Intel.*Graphics" <<< ${gpu_type}; then
-    pacman -S --noconfirm --needed libva-intel-driver
+    pacman -S --noconfirm --needed libva-intel-driver intel-gpu-tools
     echo "Installing Intel Graphics drivers"
 fi
 #SETUP IS WRONG THIS IS RUN
