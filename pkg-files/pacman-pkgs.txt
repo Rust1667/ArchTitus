@@ -84,6 +84,7 @@ telegram-desktop
 thunderbird
 timeshift
 tldr
+wgcf
 wireguard-tools
 zathura-pdf-mupdf
 zip
