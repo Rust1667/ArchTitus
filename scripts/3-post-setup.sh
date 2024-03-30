@@ -113,6 +113,7 @@ echo "  NetworkManager enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
 systemctl enable ufw.service
+sudo ufw enable
 echo "  ufw enabled"
 
 # if [[ "${FS}" == "luks" || "${FS}" == "btrfs" ]]; then
