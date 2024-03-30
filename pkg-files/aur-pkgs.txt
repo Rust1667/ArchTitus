@@ -5,7 +5,6 @@ bibata-cursor-theme
 cryptomator
 github-desktop
 qbittorrent-enhanced
-spoof-dpi-bin
 ttf-ms-fonts
 ttf-vista-fonts
 informant
