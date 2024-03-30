@@ -20,6 +20,16 @@ xorg-drivers
 xorg-server
 xorg-xinit
 xorg-xkill
+unrar
+unzip
+p7zip
+unarchiver
+gvfs-mtp
+libmtp
+ntfs-3g
+android-udev
+mtpfs
+neofetch
 --END OF MINIMAL INSTALL--
 audacious
 autoconf
