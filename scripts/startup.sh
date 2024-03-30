@@ -280,9 +280,11 @@ set_option KEYMAP $keymap
 diskpart () {
 echo -ne "
 ------------------------------------------------------------------------
-    THIS WILL FORMAT AND DELETE ALL DATA ON THE DISK
+    THIS WILL WRITE ON THE MOUNTED PARTITIONS
+    This is not supposed to format the whole disk.
+    Only write on the chosen (previously mounted) partitions in the chosen disk.
     Please make sure you know what you are doing because
-    after formating your disk there is no way to get data back
+    after rewriting your partitions there is no way to get data back
 ------------------------------------------------------------------------
 
 "
