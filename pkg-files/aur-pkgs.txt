@@ -10,3 +10,5 @@ ttf-ms-fonts
 ttf-vista-fonts
 informant
 downgrade
+reflector-simple
+ventoy-bin
