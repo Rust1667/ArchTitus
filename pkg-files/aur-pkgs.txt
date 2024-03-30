@@ -8,3 +8,4 @@ qbittorrent-enhanced
 spoof-dpi-bin
 ttf-ms-fonts
 ttf-vista-fonts
+informant
