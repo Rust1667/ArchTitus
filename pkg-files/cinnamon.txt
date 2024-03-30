@@ -13,6 +13,8 @@ redshift
 ttf-hack-nerd
 xed
 nemo-fileroller
+pipewire
+pipewire-pulse
 --END OF MINIMAL INSTALL--
 gnome-disk-utility
 gnome-system-monitor

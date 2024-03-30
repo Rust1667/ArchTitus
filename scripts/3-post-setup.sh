@@ -112,9 +112,13 @@ echo "  NetworkManager enabled"
 # echo "  Bluetooth enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
+
 systemctl enable ufw.service
 sudo ufw enable
 echo "  ufw enabled"
+
+systemctl --user unmask pipewire.service
+systemctl --user enable pipewire.service pipewire-pulse.service
 
 # if [[ "${FS}" == "luks" || "${FS}" == "btrfs" ]]; then
 # echo -ne "
