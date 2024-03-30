@@ -77,8 +77,6 @@ megatools
 neofetch
 p7zip
 parcellite
-pulseaudio
-pulseaudio-alsa
 python-notify2
 python-pip
 python-pipx
