@@ -74,6 +74,7 @@ libdvdcss
 make
 megatools
 parcellite
+openresolv
 python-notify2
 python-pip
 python-pipx
