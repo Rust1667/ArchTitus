@@ -32,7 +32,6 @@ android-udev
 mtpfs
 neofetch
 --END OF MINIMAL INSTALL--
-detox
 audacious
 autoconf
 automake
@@ -46,14 +45,15 @@ chromium
 code
 cronie
 cups
+detox
 dialog
 dmidecode
 dnsmasq
 dtc
 efibootmgr
 exfat-utils
-flameshot
 firefox
+flameshot
 flex
 fuse2
 fuse3
@@ -66,7 +66,6 @@ gst-libav
 gst-plugins-good
 gst-plugins-ugly
 gufw
-gvfs-mtp
 haveged
 htop
 intel_gpu_top
@@ -74,21 +73,17 @@ keepassxc
 libdvdcss
 make
 megatools
-neofetch
-p7zip
 parcellite
 python-notify2
 python-pip
 python-pipx
 python-psutil
 python-pyqt5
+speedtest-cli
 telegram-desktop
 thunderbird
 timeshift
-unrar
-unzip
+tldr
 wireguard-tools
 zathura-pdf-mupdf
 zip
-speedtest-cli
-tldr
