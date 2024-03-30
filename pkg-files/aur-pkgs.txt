@@ -3,7 +3,7 @@ appimagelauncher
 autojump
 bibata-cursor-theme
 cryptomator
-github-desktop-bin
+github-desktop
 qbittorrent-enhanced
 spoof-dpi-bin
 ttf-ms-fonts
