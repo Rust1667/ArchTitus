@@ -12,6 +12,7 @@ qalculate-gtk
 redshift
 ttf-hack-nerd
 xed
+nemo-fileroller
 --END OF MINIMAL INSTALL--
 gnome-disk-utility
 gnome-system-monitor

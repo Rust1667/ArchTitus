@@ -11,6 +11,7 @@ libxinerama
 linux-lts-headers
 mesa
 neovim
+noto-fonts
 noto-fonts-emoji
 os-prober
 ufw
@@ -31,6 +32,7 @@ android-udev
 mtpfs
 neofetch
 --END OF MINIMAL INSTALL--
+detox
 audacious
 autoconf
 automake
@@ -90,3 +92,4 @@ unzip
 wireguard-tools
 zathura-pdf-mupdf
 zip
+speedtest-cli
