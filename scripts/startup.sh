@@ -285,6 +285,7 @@ echo -ne "
     Only write on the chosen (previously mounted) partitions in the chosen disk.
     Please make sure you know what you are doing because
     after rewriting your partitions there is no way to get data back
+    Selecting the disk in this fork is just for configuring GRUB.
 ------------------------------------------------------------------------
 
 "
