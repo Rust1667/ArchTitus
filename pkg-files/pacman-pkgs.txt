@@ -91,3 +91,4 @@ wireguard-tools
 zathura-pdf-mupdf
 zip
 speedtest-cli
+tldr
