@@ -15,6 +15,10 @@ qalculate-gtk
 redshift
 ttf-hack-nerd
 xed
+xclip
+zenity
+imagemagick
+wmctrl
 --END OF MINIMAL INSTALL--
 gnome-disk-utility
 gnome-system-monitor

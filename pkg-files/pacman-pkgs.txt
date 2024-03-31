@@ -36,7 +36,7 @@ ntfs-3g
 android-udev
 mtpfs
 neofetch
-zenity
+jq
 --END OF MINIMAL INSTALL--
 audacious
 autoconf
