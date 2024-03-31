@@ -19,6 +19,8 @@ xclip
 zenity
 imagemagick
 wmctrl
+optipng
+jpegoptim
 --END OF MINIMAL INSTALL--
 gnome-disk-utility
 gnome-system-monitor
