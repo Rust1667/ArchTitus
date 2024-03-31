@@ -21,3 +21,5 @@ gnome-system-monitor
 gparted
 lightdm-gtk-greeter-settings
 networkmanager-openvpn
+foliate
+gnome-screenshot
