@@ -11,3 +11,4 @@ informant
 downgrade
 reflector-simple
 ventoy-bin
+raider-file-shredder
