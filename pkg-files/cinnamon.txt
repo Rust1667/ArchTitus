@@ -23,3 +23,5 @@ lightdm-gtk-greeter-settings
 networkmanager-openvpn
 foliate
 gnome-screenshot
+nemo-image-converter
+curtail

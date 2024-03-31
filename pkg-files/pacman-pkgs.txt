@@ -36,6 +36,7 @@ ntfs-3g
 android-udev
 mtpfs
 neofetch
+zenity
 --END OF MINIMAL INSTALL--
 audacious
 autoconf
@@ -97,3 +98,4 @@ wireguard-tools
 wireproxy
 zathura-pdf-mupdf
 zip
+mediainfo-gui
