@@ -47,14 +47,10 @@ echo "Fish shell has been set as the default for user $USERNAME."
 echo "Please log out and log back in to apply the changes."
 
 if [[ ! $AUR_HELPER == none ]]; then
-    # cd ~
-    # git clone "https://aur.archlinux.org/$AUR_HELPER.git"
-    # cd ~/$AUR_HELPER
-    # makepkg -si --noconfirm
-  # add the chaotic AUR repository
-  #add_chaos_aur_repo
-  # install the AUR helper
-  sudo pacman -S --noconfirm --needed $AUR_HELPER
+  cd ~
+  git clone "https://aur.archlinux.org/$AUR_HELPER.git"
+  cd ~/$AUR_HELPER
+  makepkg -si --noconfirm
   # sed $INSTALL_TYPE is using install type to check for MINIMAL installation, if it's true, stop
   # stop the script and move on, not installing any more packages below that line
   sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchTitus/pkg-files/aur-pkgs.txt | while read line
