@@ -12,7 +12,12 @@ linux-lts-headers
 mesa
 neovim
 noto-fonts
-noto-fonts-emoji
+noto-fonts-emojittf-dejavu
+ttf-liberation
+inter-font
+ttf-roboto
+noto-fonts-cjk
+noto-fonts-extra
 os-prober
 ufw
 usbutils
@@ -37,6 +42,7 @@ autoconf
 automake
 axel
 bash-completion
+bat
 bind
 bison
 bitwarden
@@ -88,5 +94,6 @@ timeshift
 tldr
 wgcf
 wireguard-tools
+wireproxy
 zathura-pdf-mupdf
 zip
