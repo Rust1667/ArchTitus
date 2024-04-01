@@ -46,7 +46,14 @@ sudo usermod -s /usr/bin/fish $USERNAME
 echo "Fish shell has been set as the default for user $USERNAME."
 echo "Please log out and log back in to apply the changes."
 
-if [[ ! $AUR_HELPER == none ]]; then
+if [[ $AUR_HELPER == yay ]]; then
+  cd ~
+  pacman -S --needed git base-devel
+  git clone https://aur.archlinux.org/yay-bin.git
+  cd yay-bin
+  makepkg -si
+  cd ~
+elif [[ ! $AUR_HELPER == none ]]; then
   cd ~
   git clone "https://aur.archlinux.org/$AUR_HELPER.git"
   cd ~/$AUR_HELPER
