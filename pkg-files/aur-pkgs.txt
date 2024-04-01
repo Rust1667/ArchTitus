@@ -2,13 +2,8 @@
 appimagelauncher
 autojump
 bibata-cursor-theme
-cryptomator
-github-desktop
-qbittorrent-enhanced
+github-desktop-bin
 ttf-ms-fonts
 ttf-vista-fonts
 informant
 downgrade
-reflector-simple
-ventoy-bin
-raider-file-shredder
