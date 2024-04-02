@@ -3,6 +3,9 @@ appimagelauncher
 autojump
 bibata-cursor-theme
 github-desktop-bin
+ytdownloader-gui-bin
+cryptomator-bin
+vesktop-bin
 ttf-ms-fonts
 ttf-vista-fonts
 informant
