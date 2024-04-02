@@ -31,3 +31,4 @@ foliate
 gnome-screenshot
 nemo-image-converter
 curtail
+dash

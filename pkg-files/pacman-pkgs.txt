@@ -99,3 +99,5 @@ wireproxy
 zathura-pdf-mupdf
 zip
 mediainfo-gui
+net-tools
+tree
