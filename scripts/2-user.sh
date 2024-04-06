@@ -73,6 +73,19 @@ fi
 
 export PATH=$PATH:~/.local/bin
 
+# Install flatpaks
+echo "Installing flatpaks"
+sudo pacman -S --noconfirm --needed flatpak
+sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchTitus/pkg-files/flatpaks.txt | while read line
+do
+  if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]; then
+    # If selected installation type is FULL, skip the --END OF THE MINIMAL INSTALLATION-- line
+    continue
+  fi
+  echo "INSTALLING: ${line}"
+  flatpak install -y flathub ${line}
+done
+
 # Theming DE if user chose FULL installation
 if [[ $INSTALL_TYPE == "FULL" ]]; then
   if [[ $DESKTOP_ENV == "kde" ]]; then
