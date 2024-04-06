@@ -37,6 +37,7 @@ android-udev
 mtpfs
 neofetch
 jq
+flatpak
 --END OF MINIMAL INSTALL--
 audacious
 autoconf
